@@ -67,44 +67,14 @@
     <h1>REZ.pj</h1>
     <div class="Pages" style="display: flex; justify-content: center; gap: 10px;">
   <a href="index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Home</a>
-  <a href="index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Shirts</a>
+  <a href="pages/shirts.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Shirts</a>
   <a href="index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Music</a>
   <a href="index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">About</a>
 </div>
     
      <hr>
     <p>hi</p>
-    <p>buy shirts, watch videos, or listen to the music stream</p>
-    <hr>
-
-
-
-
-<br>
-    <img src="https://raw.githubusercontent.com/PJREZ/PJREZ.github.io/refs/heads/main/img/Wacko.png" alt="Wacko Image" width="300">
-
-    <p>What a nice picture of Wacko</p>
-    
    
- 
-<hr>
-    <p>Links:</p>
-
-    <div class="logo-container">
-        <!-- YouTube Logo -->
-        <a href="https://www.youtube.com/@REZPJ" target="_blank">
-            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png" alt="YouTube">
-        </a>
-        <!-- Instagram Logo -->
-        <a href="https://www.instagram.com/rez.pj/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/768px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png?20170817060151" alt="Instagram">
-        </a>
-        <!-- Twitter (X) Logo -->
-        <a href="https://x.com/rezpjj/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="X/Twitter">
-        </a>
-    </div>
-
     <hr>
 </body>
 </html>
