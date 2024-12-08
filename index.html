@@ -2,17 +2,20 @@
 <html>
 <head>
     <title>REZ.pj</title>
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            background-color: #000000; /* Blackbackground */
+            background-color: #000000; /* Black background */
             font-family: Verdana, sans-serif; /* Classic font */
-            color: #11d100; /* White text */
+            color: #11d100; /* Green text */
             text-align: center; /* Center align text */
             margin: 0;
             padding: 0;
         }
         h1 {
-            color: ##11d100; /* Bright Green heading */
+            color: #11d100; /* Bright Green heading */
         }
         a {
             color: #0000ff; /* Bright blue links */
@@ -24,45 +27,73 @@
             background: #333;
             margin: 20px 0;
         }
+
+        /* Container for logos with flex layout */
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Center the logos */
+            gap: 20px; /* Add space between logos */
+            flex-wrap: wrap; /* Allow logos to wrap on small screens */
+        }
+
+        /* Adjust image sizes for different screen sizes */
+        .logo-container img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Make the Wacko image responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .logo-container img {
+                width: 30px; /* Smaller size for mobile */
+                height: 30px;
+            }
+
+            /* Adjust the Wacko image for small screens */
+            img {
+                width: 80%; /* Make the Wacko image fill 80% of the screen */
+            }
+        }
     </style>
 </head>
 <body>
     <h1>REZ.pj</h1>
     <p>hi</p>
-   
+
     <hr>
     <p>buy shirts, watch videos, or listen to the music stream</p>
     <hr>
- <img src="https://raw.githubusercontent.com/PJREZ/PJREZ.github.io/refs/heads/main/img/Wacko.png" alt="Wacko Image" width="300">
+
+    <img src="https://raw.githubusercontent.com/PJREZ/PJREZ.github.io/refs/heads/main/img/Wacko.png" alt="Wacko Image" width="300">
     <p>What I'm listening to rn:</p>
     <!-- Embed Spotify Now Playing Widget -->
-    
-     <h1>Click the image to visit YouTube</h1>
 
-    
+    <h1>Click the image to visit YouTube</h1>
 
-<hr>
+    <hr>
 
- <p>Links:</p>
-<div class="logo-container">
-    <!-- YouTube Logo -->
-    <a href="https://www.youtube.com/@REZPJ" target="_blank">
-        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png" alt="YouTube" width="30" height="35">
-    </a>
-    <!-- Another logo (replace with your desired logo URL) -->
-    <a href="https://www.instagram.com/rez.pj/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/768px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png?20170817060151" alt="Instagram" width="35" height="35" >
-    </a>    
- <!-- Another logo (replace with your desired logo URL) -->
-    <a href="https://x.com/rezpjj/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="X/Twitter" width="35" height="35">
-    </a>    
+    <p>Links:</p>
+    <div class="logo-container">
+        <!-- YouTube Logo -->
+        <a href="https://www.youtube.com/@REZPJ" target="_blank">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png" alt="YouTube">
+        </a>
+        <!-- Instagram Logo -->
+        <a href="https://www.instagram.com/rez.pj/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/768px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png?20170817060151" alt="Instagram">
+        </a>
+        <!-- Twitter (X) Logo -->
+        <a href="https://x.com/rezpjj/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="X/Twitter">
+        </a>
+    </div>
 
-
-  
-</div>
-
-   
     <hr>
 </body>
 </html>
