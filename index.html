@@ -13,6 +13,10 @@
             text-align: center; /* Center align text */
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full page height */
+            justify-content: space-between; /* Push content to top and bottom */
         }
         h1 {
             color: #11d100; /* Bright Green heading */
@@ -34,6 +38,8 @@
             justify-content: center; /* Center the logos */
             gap: 20px; /* Add space between logos */
             flex-wrap: wrap; /* Allow logos to wrap on small screens */
+            margin-top: auto; /* Push logos to the bottom of the page */
+            padding: 20px 0; /* Add padding for better spacing */
         }
 
         /* Adjust image sizes for different screen sizes */
@@ -77,6 +83,7 @@
     <h1>Click the image to visit YouTube</h1>
 
     <hr>
+
     <p>Links:</p>
     <div class="logo-container">
         <!-- YouTube Logo -->
@@ -92,6 +99,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="X/Twitter">
         </a>
     </div>
+
     <hr>
 </body>
 </html>
