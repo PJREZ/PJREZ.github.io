@@ -99,52 +99,104 @@
     <hr>
 
     <p>buy shirts, watch videos, or listen to the music stream</p>
-    <hr>
+    
+	
+	
+	
+	<hr>
 
-    <div class="Wacko"></div> <!-- This section is for your other content -->
+<script>
+    function loadImagesFromGitHub() {
+        const imageContainer = document.getElementById('imageContainer');
+        const githubFolderURL = 'https://raw.githubusercontent.com/PJREZ/PJREZ.github.io/refs/heads/main/img/'; // Replace with your GitHub folder URL
+        
+        // List of image filenames in the GitHub folder (you can update this as per your files)
+        const imageFilenames = [
+            'image1.png',
+            'IMG_3767.PNG',
+            'IMG_6296.PNG',
+            'IMG_7077.JPG',
+            'IMG_1566.jpg'
+        ];
 
-    <!-- Image Carousel -->
-    <div class="imagecarousel">
-        <div class="imagecontainer" id="imageContainer">
-            <!-- Images will be inserted here dynamically -->
-        </div>
-    </div>
+        // Loop through the filenames and add the image elements to the container
+        imageFilenames.forEach(function(filename) {
+            const img = document.createElement('img');
+            img.src = githubFolderURL + filename;
+            img.alt = filename;
+            imageContainer.appendChild(img);
+        });
 
-    <script>
-        function loadImagesFromGitHub() {
-            const imageContainer = document.getElementById('imageContainer');
-            const githubFolderURL = 'https://raw.githubusercontent.com/PJREZ/PJREZ.github.io/refs/heads/main/img/'; // Replace with your GitHub folder URL
-            
-            // List of image filenames in the GitHub folder (you can update this as per your files)
-            const imageFilenames = [
-                'image1.png',
-                'IMG_3767.PNG',
-                'IMG_6296.PNG',
-                'IMG_7077.JPG',
-                'IMG_1566.jpg'
-            ];
+        // Duplicate the images for infinite scroll effect
+        const images = imageContainer.querySelectorAll('img');
+        images.forEach(function(img) {
+            const clone = img.cloneNode();
+            imageContainer.appendChild(clone);
+        });
+    }
 
-            // Loop through the filenames and add the image elements to the container
-            imageFilenames.forEach(function(filename) {
-                const img = document.createElement('img');
-                img.src = githubFolderURL + filename;
-                img.alt = filename;
-                imageContainer.appendChild(img);
-            });
+    // Load images when the page loads
+    window.onload = loadImagesFromGitHub;
+</script>
 
-            // Duplicate the images for infinite scroll effect
-            const images = imageContainer.querySelectorAll('img');
-            images.forEach(function(img) {
-                const clone = img.cloneNode();
-                imageContainer.appendChild(clone);
-            });
+<style>
+    .imagecarousel {
+        position: relative;
+        margin: 30px auto;
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+        max-width: 100%; /* Ensure it never exceeds the screen width */
+    }
+
+    .imagecontainer {
+        display: flex;
+        animation: bannermove 30s linear infinite; /* Speed up the scrolling */
+        width: 200%; /* Double the width to make room for duplicated images */
+    }
+
+    .imagecontainer img {
+        width: 20vw; /* Set width based on viewport width for responsiveness */
+        height: 20vw; /* Set height based on viewport width to maintain square ratio */
+        object-fit: cover; /* Ensure the image is contained within the square without distortion */
+        max-height: 100%; /* Prevent images from being taller than the viewport */
+    }
+
+    @keyframes bannermove {
+        0% {
+            transform: translateX(0); /* Start at the beginning of the images */
         }
+        100% {
+            transform: translateX(-50%); /* Move left until the last image set is fully out of the frame */
+        }
+    }
 
-        // Load images when the page loads
-        window.onload = loadImagesFromGitHub;
-    </script>
+    /* Adjust for smaller screens */
+    @media (max-width: 768px) {
+        .imagecontainer img {
+            width: 30vw; /* Make images slightly bigger on medium screens */
+            height: 30vw;
+        }
+    }
 
-    <hr>
+    /* Adjust for very small screens */
+    @media (max-width: 480px) {
+        .imagecontainer img {
+            width: 40vw; /* Increase the image size for very small screens */
+            height: 40vw;
+        }
+    }
+</style>
+
+<div class="imagecarousel">
+    <div class="imagecontainer" id="imageContainer">
+        <!-- Images will be inserted here dynamically -->
+    </div>
+</div>
+
+<hr>
+
+	
 
     <p>Links:</p>
     <div class="logo-container">
