@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REZ.pj</title>
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            font-family: Verdana, sans-serif; /* Classic font */
+            color: #11d100; /* Green text */
+            text-align: center; /* Center align text */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #11d100; /* Bright Green heading */
+        }
+        a {
+            color: #0000ff; /* Bright blue links */
+            text-decoration: ;
+        } 
+        hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 20px 0;
+        }
+        /* Container for logos with flex layout */
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Center the logos */
+            gap: 20px; /* Add space between logos */
+            flex-wrap: wrap; /* Allow logos to wrap on small screens */
+        }
+        /* Adjust image sizes for different screen sizes */
+        .logo-container img {
+            width: 35px;
+            height: 35px;
+        }
+        /* Make the Wacko image responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .logo-container img {
+                width: 30px; /* Smaller size for mobile */
+                height: 30px;
+            }
+            /* Adjust the Wacko image for small screens */
+            img {
+                width: 80%; /* Make the Wacko image fill 80% of the screen */
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<p> </p>
+  <a href="index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Go Back</a>
+</div>
+    
+     <hr>
+    
+	
+	
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image to Discord Webhook</title>
+    <style>
+        /* Center the preview image */
+        #imagePreview {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 300px;
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+ 
+<p style="font-size: 24px; text-decoration: underline;">Upload Pictures Here:</p>
+<input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" />
+<button onclick="uploadFile()">Upload</button>
+<hr>
+
+<p>Image Preview:</p>
+<img id="imagePreview" style="display: none;" />
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const imagePreview = document.getElementById('imagePreview');
+
+    // Display image preview
+    fileInput.addEventListener('change', function() {
+        const file = fileInput.files[0];
+        
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                imagePreview.src = e.target.result;
+                imagePreview.style.display = 'block'; // Show the preview image
+            }
+
+            reader.readAsDataURL(file); // Read the file as a data URL
+        }
+    });
+
+    async function uploadFile() {
+        const file = fileInput.files[0];
+
+        if (!file) {
+            alert("Please select a file first.");
+            return;
+        }
+
+        // Validate file type
+        const allowedTypes = ['image/png', 'image/jpeg', 'image/webp'];
+        if (!allowedTypes.includes(file.type)) {
+            alert("Please upload a valid image file (PNG, JPEG, or WebP).");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", file);
+
+        const webhookURL = 'https://discord.com/api/webhooks/1315923994456883241/lz3VfmcY2AkToZI4eqknWP3ccRa4Kmv7OETAbmaQ1a3PWWnrsjTuW8V8qp1ModcDdakU'; // Your Discord webhook URL
+
+        try {
+            const response = await fetch(webhookURL, {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (response.ok) {
+                alert('File uploaded successfully!');
+            } else {
+                alert('Failed to upload file');
+            }
+        } catch (error) {
+            console.error('Error uploading file:', error);
+            alert('Error uploading file');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
