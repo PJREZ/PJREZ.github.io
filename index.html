@@ -102,8 +102,6 @@
     
 	
 	
-	
-	
 	<hr>
 
 <script>
@@ -128,7 +126,7 @@
             imageContainer.appendChild(img);
         });
 
-        // Duplicate the images to ensure smooth infinite scroll
+        // Duplicate the images for infinite scroll effect
         const images = imageContainer.querySelectorAll('img');
         images.forEach(function(img) {
             const clone = img.cloneNode();
@@ -143,11 +141,11 @@
 <style>
     .imagecarousel {
         position: relative;
-        height: 210px; /* Make the carousel 30% smaller in height */
         margin: 30px auto;
         overflow: hidden;
         display: flex;
-        width: 70%; /* Make the carousel 30% smaller in width */
+        width: 100%;
+        height: auto; /* Allow the height to adjust based on content */
     }
 
     .imagecontainer {
@@ -156,9 +154,8 @@
     }
 
     .imagecontainer img {
-        width: 250px; /* Adjust each image to be smaller */
-        height: 250px; /* Adjust each image to be smaller */
         object-fit: cover; /* Ensure the image is contained within the square without distortion */
+        flex-shrink: 0; /* Prevent images from shrinking */
     }
 
     @keyframes bannermove {
@@ -167,6 +164,34 @@
         }
         100% {
             transform: translateX(-50%); /* Move left until the last image set is fully out of the frame */
+        }
+    }
+
+    /* Default image size for larger screens */
+    .imagecontainer img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Resize images for smaller devices */
+    @media (max-width: 1200px) {
+        .imagecontainer img {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .imagecontainer img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .imagecontainer img {
+            width: 150px;
+            height: 150px;
         }
     }
 </style>
@@ -179,7 +204,8 @@
 
 <hr>
 
-
+	
+	
     <p>Links:</p>
     <div class="logo-container">
         <!-- YouTube Logo -->
