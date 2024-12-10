@@ -103,6 +103,7 @@
 	
 	
 	
+	
 	<hr>
 
 <script>
@@ -127,7 +128,7 @@
             imageContainer.appendChild(img);
         });
 
-        // Duplicate the images for infinite scroll effect
+        // Duplicate the images to ensure smooth infinite scroll
         const images = imageContainer.querySelectorAll('img');
         images.forEach(function(img) {
             const clone = img.cloneNode();
@@ -142,35 +143,30 @@
 <style>
     .imagecarousel {
         position: relative;
-        height: 200px; /* Smaller height */
-        margin: 0; /* Remove margin to eliminate space */
+        height: 210px; /* Make the carousel 30% smaller in height */
+        margin: 30px auto;
         overflow: hidden;
         display: flex;
-        width: 100%;
+        width: 70%; /* Make the carousel 30% smaller in width */
     }
 
     .imagecontainer {
         display: flex;
-        animation: bannermove 30s linear infinite;
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
+        animation: bannermove 30s linear infinite; /* Speed up the scrolling */
     }
 
     .imagecontainer img {
-        width: 200px;  /* Set both width and height to make the images square */
-        height: 200px; /* Set both width and height to make the images square */
-        object-fit: cover; /* Ensure the image fits within the square without distortion */
+        width: 250px; /* Adjust each image to be smaller */
+        height: 250px; /* Adjust each image to be smaller */
+        object-fit: cover; /* Ensure the image is contained within the square without distortion */
     }
 
     @keyframes bannermove {
         0% {
             transform: translateX(0); /* Start at the beginning of the images */
         }
-        50% {
-            transform: translateX(-50%); /* Move halfway across for the second set */
-        }
         100% {
-            transform: translateX(-100%); /* Move fully to the left to show the next set */
+            transform: translateX(-50%); /* Move left until the last image set is fully out of the frame */
         }
     }
 </style>
@@ -183,7 +179,6 @@
 
 <hr>
 
-	
 
     <p>Links:</p>
     <div class="logo-container">
