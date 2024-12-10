@@ -142,17 +142,19 @@
 <style>
     .imagecarousel {
         position: relative;
-        margin: 30px auto;
+        margin: 0 auto;
         overflow: hidden;
         display: flex;
         width: 100%;
         max-width: 100%; /* Ensure it never exceeds the screen width */
+        height: 40vh; /* Set height based on viewport height for responsiveness */
     }
 
     .imagecontainer {
         display: flex;
         animation: bannermove 30s linear infinite; /* Speed up the scrolling */
         width: 200%; /* Double the width to make room for duplicated images */
+        height: 100%; /* Make sure the container takes full height */
     }
 
     .imagecontainer img {
@@ -173,6 +175,10 @@
 
     /* Adjust for smaller screens */
     @media (max-width: 768px) {
+        .imagecarousel {
+            height: 50vh; /* Increase height on medium screens */
+        }
+
         .imagecontainer img {
             width: 30vw; /* Make images slightly bigger on medium screens */
             height: 30vw;
@@ -181,6 +187,10 @@
 
     /* Adjust for very small screens */
     @media (max-width: 480px) {
+        .imagecarousel {
+            height: 60vh; /* Increase height on very small screens */
+        }
+
         .imagecontainer img {
             width: 40vw; /* Increase the image size for very small screens */
             height: 40vw;
