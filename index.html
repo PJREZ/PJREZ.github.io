@@ -106,6 +106,9 @@
 <p>-Added picture carousel</p>
 <p>-Added music page<p>
 <p>-Added image uploads
+<br> 
+<br>
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/87599904-e193-4b75-a519-b5ee2820e856/dh3ms3t-13f64db0-6d9d-4835-9835-77581b995781.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg3NTk5OTA0LWUxOTMtNGI3NS1hNTE5LWI1ZWUyODIwZTg1NlwvZGgzbXMzdC0xM2Y2NGRiMC02ZDlkLTQ4MzUtOTgzNS03NzU4MWI5OTU3ODEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.FZ6w6HWgN1Gjpxuf-diGvfRKYkqwZzWazIJtTgOdIFk" alt="Sonic" width="200" height="125" />
 
 
 
@@ -118,8 +121,12 @@
 
 
 
+
+<br>
 
 <hr>
+<p style="font-size: 30px; text-decoration: underline;">Images:</p>
+
 <script>
     function loadImagesFromGitHub() {
         const imageContainer = document.getElementById('imageContainer');
@@ -218,6 +225,11 @@
     </div>
 </div>
   
+<div>
+  <p style="display: inline-block; margin-right: 0; padding-right: 0;">Add your own images</p>
+  <a href="/pages/upload.html" style="display: inline-block; text-decoration: underline; font-weight; color: #11d100;">here</a>
+</div>
+
 <hr>
 
 	
@@ -239,87 +251,7 @@
     </div>
 
     <hr>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration: underline; font-weight: bold; color: #11d100;">?</a>
-</body>
+   </body>
 </html>
 
-<hr>
-------------------------------------------------------------------------------------------------------------
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Overlay with Image</title>
-  <style>
-    /* General styling for overlay */
-    .overlay {
-      position: absolute; /* Moves with scrolling */
-      top: 25.5%; /* Position it 10% from the top of the screen */
-      left: 80%; /* Position it 75% from the left of the screen */
-      width: 15vw; /* Set width as a percentage of the viewport width */
-      height: 15vw; /* Set height as a percentage of the viewport width */
-      background-color: rgba(0, 0, 0, 0); /* Transparent background */
-      z-index: 1000; /* Ensures the overlay is on top of everything */
-      color: white;
-      text-align: center;
-      padding: 10px;
-      box-sizing: border-box;
-      transform: translateX(-50%); /* Center it horizontally */
-    }
-
-    /* Image inside overlay */
-    .overlay img {
-      width: 100%; /* Make the image fill the width of the overlay */
-      height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Optional: content inside overlay */
-    .overlay-content {
-      position: absolute;
-      bottom: 10px; /* Adjust position of text inside the overlay */
-      width: 100%;
-      font-size: 16px;
-    }
-
-    /* Media query for mobile devices */
-    @media (max-width: 600px) {
-      .overlay {
-        top: 20%; /* Adjust position on smaller screens */
-        left: 50%; /* Center it on the smaller screen */
-        width: 30vw; /* Increase width on mobile */
-        height: 30vw; /* Increase height on mobile */
-      }
-    }
-
-    /* Media query for larger screens */
-    @media (min-width: 1200px) {
-      .overlay {
-        top: 15%; /* Adjust top position for larger screens */
-        left: 70%; /* Adjust left position for larger screens */
-        width: 10vw; /* Smaller width for larger screens */
-        height: 10vw; /* Smaller height for larger screens */
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Overlay Div with Image -->
-  <div class="overlay">
-    <img src="https://media.tenor.com/YdK555HlTFMAAAAM/sonic.gif" alt="Sonic GIF">
-    <div class="overlay-content">
-      <!-- Add optional text content here -->
-    </div>
-  </div>
-
-  <!-- Content to enable scrolling -->
-  <div style="height: 2000px;">
-    <p>Scroll down to see the overlay move with the page!</p>
-  </div>
-
-</body>
-</html>
 
