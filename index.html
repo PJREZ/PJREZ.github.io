@@ -166,8 +166,11 @@
         0% {
             transform: translateX(0); /* Start at the beginning of the images */
         }
+        50% {
+            transform: translateX(-50%); /* Move halfway across for the second set */
+        }
         100% {
-            transform: translateX(-100%); /* Move left until the last image set is fully out of the frame */
+            transform: translateX(-100%); /* Move fully to the left to show the next set */
         }
     }
 </style>
