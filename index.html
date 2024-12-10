@@ -1,109 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REZ.pj</title>
-
-    <style>
-        body {
-            background-color: #000000; /* Black background */
-            font-family: Verdana, sans-serif; /* Classic font */
-            color: #11d100; /* Green text */
-            text-align: center; /* Center align text */
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #11d100; /* Bright Green heading */
-        }
-
-        a {
-            color: #0000ff; /* Bright blue links */
-            text-decoration: none;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #333;
-            margin: 20px 0;
-        }
-
-        .logo-container {
-            display: flex;
-            justify-content: center; /* Center the logos */
-            gap: 20px; /* Add space between logos */
-            flex-wrap: wrap; /* Allow logos to wrap on small screens */
-        }
-
-        .logo-container img {
-            width: 35px;
-            height: 35px;
-        }
-
-        /* Image Carousel Container */
-        .imagecarousel {
-            position: relative;
-            height: 300px; /* Fixed height for the carousel */
-            margin: 30px auto; /* Center the carousel */
-            overflow: hidden; /* Hide images that overflow */
-            display: flex;
-            width: 100%; /* Make the carousel span the full width of the screen */
-        }
-
-        .imagecontainer {
-            display: flex;
-            animation: bannermove 50s linear infinite;
-        }
-
-        .imagecontainer img {
-            width: 300px; /* Set each image to be square */
-            height: 300px; /* Set each image to be square */
-            object-fit: cover; /* Ensure the image is contained within the square without distortion */
-        }
-
-        @keyframes bannermove {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .imagecarousel {
-                height: 200px; /* Adjust height for smaller screens */
-            }
-
-            .imagecontainer img {
-                width: 200px;  /* Adjust image size for smaller screens */
-                height: 200px; /* Adjust image size for smaller screens */
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>REZ.pj</h1>
-
-    <div class="Pages" style="display: flex; justify-content: center; gap: 10px;">
-        <a href="/index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Home</a>
-        <a href="/pages/shirts.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Shirts</a>
-        <a href="/pages/music.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Music</a>
-        <a href="/pages/about.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">About</a>
-        <a href="/pages/Downloads.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Downloads</a>
-    </div>
-
-    <hr>
-
-    <p>buy shirts, watch videos, or listen to the music stream</p>
-    
-	
-	
-	
-	<hr>
+<hr>
 
 <script>
     function loadImagesFromGitHub() {
@@ -142,26 +37,22 @@
 <style>
     .imagecarousel {
         position: relative;
-        margin: 0 auto;
+        height: 300px;
+        margin: 30px auto;
         overflow: hidden;
         display: flex;
         width: 100%;
-        max-width: 100%; /* Ensure it never exceeds the screen width */
-        height: 40vh; /* Set height based on viewport height for responsiveness */
     }
 
     .imagecontainer {
         display: flex;
         animation: bannermove 30s linear infinite; /* Speed up the scrolling */
-        width: 200%; /* Double the width to make room for duplicated images */
-        height: 100%; /* Make sure the container takes full height */
     }
 
     .imagecontainer img {
-        width: 20vw; /* Set width based on viewport width for responsiveness */
-        height: 20vw; /* Set height based on viewport width to maintain square ratio */
+        width: 300px; /* Set each image to be square */
+        height: 300px; /* Set each image to be square */
         object-fit: cover; /* Ensure the image is contained within the square without distortion */
-        max-height: 100%; /* Prevent images from being taller than the viewport */
     }
 
     @keyframes bannermove {
@@ -170,30 +61,6 @@
         }
         100% {
             transform: translateX(-50%); /* Move left until the last image set is fully out of the frame */
-        }
-    }
-
-    /* Adjust for smaller screens */
-    @media (max-width: 768px) {
-        .imagecarousel {
-            height: 50vh; /* Increase height on medium screens */
-        }
-
-        .imagecontainer img {
-            width: 30vw; /* Make images slightly bigger on medium screens */
-            height: 30vw;
-        }
-    }
-
-    /* Adjust for very small screens */
-    @media (max-width: 480px) {
-        .imagecarousel {
-            height: 60vh; /* Increase height on very small screens */
-        }
-
-        .imagecontainer img {
-            width: 40vw; /* Increase the image size for very small screens */
-            height: 40vw;
         }
     }
 </style>
@@ -205,26 +72,3 @@
 </div>
 
 <hr>
-
-	
-
-    <p>Links:</p>
-    <div class="logo-container">
-        <!-- YouTube Logo -->
-        <a href="https://www.youtube.com/@REZPJ" target="_blank">
-            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png" alt="YouTube">
-        </a>
-        <!-- Instagram Logo -->
-        <a href="https://www.instagram.com/rez.pj/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/768px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png?20170817060151" alt="Instagram">
-        </a>
-        <!-- Twitter (X) Logo -->
-        <a href="https://x.com/rezpjj/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="X/Twitter">
-        </a>
-    </div>
-
-    <hr>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration: underline; font-weight: bold; color: #11d100;">?</a>
-</body>
-</html>
