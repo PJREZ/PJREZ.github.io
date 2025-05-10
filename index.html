@@ -251,6 +251,47 @@
     </div>
 
     <hr>
+
+	<hr>
+
+<!-- Discord Webhook Textbox -->
+<p style="font-size: 20px; text-decoration: underline;">Send Message to REZ Discord</p>
+<div style="margin: 20px;">
+  <input type="text" id="discordMessage" placeholder="Type your message..." style="padding: 10px; width: 300px;">
+  <button onclick="sendToDiscord()" style="padding: 10px; background-color: #11d100; color: black; border: none; cursor: pointer;">Send</button>
+  <p id="status" style="color: #11d100; margin-top: 10px;"></p>
+</div>
+
+<script>
+  function sendToDiscord() {
+    const message = document.getElementById('discordMessage').value;
+    const status = document.getElementById('status');
+    if (!message.trim()) {
+      status.textContent = 'Message cannot be empty.';
+      return;
+    }
+
+    fetch('https://discord.com/api/webhooks/1309113664821002314/ClXBlAchbrr8x2zrXOQa4BMgmr45foWN-ea9Zjnqbnb1jAjY4pk2gkkpyXPXugj3NXOF', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content: message })
+    }).then(response => {
+      if (response.ok) {
+        status.textContent = 'Message sent!';
+        document.getElementById('discordMessage').value = '';
+      } else {
+        status.textContent = 'Failed to send message.';
+      }
+    }).catch(error => {
+      console.error('Error:', error);
+      status.textContent = 'Error sending message.';
+    });
+  }
+</script>
+
+<hr>
+
+	
    </body>
 </html>
 
