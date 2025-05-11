@@ -2,78 +2,119 @@
 <html>
 <head>
     <title>REZ.pj</title>
-    <!-- Meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #000000; /* Black background */
-            font-family: Verdana, sans-serif; /* Classic font */
-            color: #11d100; /* Green text */
-            text-align: center; /* Center align text */
+            background-color: #000000;
+            font-family: Verdana, sans-serif;
+            color: #11d100;
+            text-align: center;
             margin: 0;
             padding: 0;
         }
         h1 {
-            color: #11d100; /* Bright Green heading */
+            color: #11d100;
         }
         a {
-            color: #0000ff; /* Bright blue links */
-            text-decoration: ;
-        } 
+            color: #0000ff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
         hr {
             border: 0;
             height: 1px;
             background: #333;
             margin: 20px 0;
         }
-        /* Container for logos with flex layout */
+
+        .Pages {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
         .logo-container {
             display: flex;
-            justify-content: center; /* Center the logos */
-            gap: 20px; /* Add space between logos */
-            flex-wrap: wrap; /* Allow logos to wrap on small screens */
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        /* Adjust image sizes for different screen sizes */
+
         .logo-container img {
             width: 35px;
             height: 35px;
         }
-        /* Make the Wacko image responsive */
+
         img {
             max-width: 100%;
             height: auto;
         }
-        /* Responsive adjustments for smaller screens */
+
+        /* Image grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 2px solid #11d100;
+            border-radius: 4px;
+            background-color: #111;
+        }
+
         @media (max-width: 600px) {
             .logo-container img {
-                width: 30px; /* Smaller size for mobile */
+                width: 30px;
                 height: 30px;
             }
-            /* Adjust the Wacko image for small screens */
+
             img {
-                width: 80%; /* Make the Wacko image fill 80% of the screen */
+                width: 80%;
             }
         }
     </style>
 </head>
 <body>
 
-
-
-
-
     <h1>REZ.pj</h1>
-    <div class="Pages" style="display: flex; justify-content: center; gap: 10px;">
-  <a href="/index.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Home</a>
-  <a href="/pages/shirts.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Shirts</a>
-  <a href="music.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">Music</a>
-  <a href="about.html" style="text-decoration: underline; font-weight: bold; color: #11d100;">About</a>
- <a href="/pages/Downloads" style="text-decoration: underline; font-weight: bold; color: #11d100;">Downloads</a>
-</div>
-    
-     <hr>
-    <p>I'll add shirt pictures and pricings here in the future</p>
-   
+
+    <div class="Pages">
+        <a href="/index.html">Home</a>
+        <a href="/pages/shirts.html">Shirts</a>
+        <a href="music.html">Music</a>
+        <a href="about.html">About</a>
+        <a href="/pages/Downloads">Downloads</a>
+    </div>
+
     <hr>
+    <p>I'll add shirt pictures and pricings here in the future</p>
+    <hr>
+
+    <!-- Responsive Image Grid -->
+    <div class="image-grid">
+        <img src="img/Shirt/Logo.jpeg" alt="Shirts">
+  <img src="img/Shirt/MSM.jpeg" alt="My Singing">
+  <img src="img/Shirt/Skell.jpeg" alt="First Ever">
+ <img src="img/Shirt/Capy.jpeg" alt="OK I Pull up">
+  <img src="img/Shirt/Towel.jpeg" alt="Fine Dining">
+  <img src="img/Shirt/Symposia.jpeg" alt="Symposia">
+  <img src="img/Shirt/Symposia2.jpeg" alt="Symposia2">
+  <img src="img/Shirt/AVAP.jpeg" alt="Halloween">
+  <img src="img/Shirt/Kitty.jpeg" alt="Hello Kitty Pillow">
+ <img src="img/Shirt/Blox.jpeg" alt="Blox">
+
+
+
+        <!-- Add more images here -->
+    </div>
+
 </body>
 </html>
